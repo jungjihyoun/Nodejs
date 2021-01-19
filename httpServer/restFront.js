@@ -61,7 +61,9 @@ document.getElementById('form').addEventListener('submit', async (e) => {
     e.target.username.value = '';
 });
 
-document.getElementById('form').addEventListener('submit', async (e) => {
+
+
+document.getElementById('sunmit').addEventListener('submit', async (e) => {
     e.preventDefault();
     const question = e.target.question.value;
     if (!question) {
@@ -69,7 +71,7 @@ document.getElementById('form').addEventListener('submit', async (e) => {
     }
     try {
         await axios.post('/Q&A', { question });
-        getUser();
+        // getUser();
     } catch (err) {
         console.error(err);
     }
